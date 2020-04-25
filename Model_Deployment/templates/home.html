@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<style type="text/css" media="screen">
+		.container {
+  					width: 500px;
+  					clear: both;
+					}
+
+		.container input {
+		  				width: 100%;
+		  				clear: both;
+						}
+
+		button {
+		  margin:auto;
+		  display:block;
+		  background-color: #0BB5FF;
+		  font-size: 20px;
+		  width: 50%;
+		}
+
+		form  { display: table;      }
+		p     { display: table-row;  }
+		label { display: table-cell; }
+		input { display: table-cell; }
+
+
+	</style>
+	<title>Breakdown Prediction</title>
+</head>
+<body>
+	<h1>
+		<div style="text-align:center"><font color="blue">Machine Failure Prediction of Factory</font>
+		</div>
+	</h1>
+	<hr>
+	</br>
+	<h2><div style="text-align:center">Enter the values</div></h2>
+	</br>
+	<div class='container'>
+		<div class='row'>
+			<div class='col-6'>
+				<form id='form1' method="POST" action="/predict">
+
+					<p>
+					<label for="Random">Random</label>
+					<input type="text" name="Random">
+					</p>
+					<br>
+
+					<p>
+					<label for="Machine_nbr">Number of Machine</label>
+					<input type="text" name="Machine_nbr">
+					</p>
+					<br>
+
+					<p>
+					<label for="lifetime">Lifetime</label>
+					<input type="text" name="lifetime">
+					</p>
+					<br>
+
+					<p>
+					<label for="pressureInd">Pressure Indicator</label>
+					<input type="text" name="pressureInd">
+					</p>
+					<br>
+
+					<p>
+					<label for="moistureInd">Moisture Indicator</label>
+					<input type="text" name="moistureInd">
+					</p>
+					<br>
+
+					<p>
+					<label for="temperatureInd">Temperature Indicator &nbsp&nbsp</label>
+					<input type="text" name="temperatureInd">
+					</p>
+					<br>
+
+					<p>
+					<label for="team">Number of Teams</label>
+					<input type="text" name="team">
+					</p>
+					<br>
+
+					<p>
+					<label for="provider">Number of providers</label>
+					<input type="text" name="provider">
+					</p>
+					<br>
+				</form>
+				<button type="submit" form="form1" value="Submit">Submit</button>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>
