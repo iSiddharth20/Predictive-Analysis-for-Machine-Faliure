@@ -1,4 +1,4 @@
-Random,Machine nbr,lifetime,pressureInd,moistureInd,temperatureInd,team,provider,broken
+Random,Machine_nbr,lifetime,pressureInd,moistureInd,temperatureInd,team,provider,broken
 0.437419913,723,60,77.83610485,112.8325443,121.7863711,3,3,Yes
 0.688344646,107,88,89.35061975,95.22812545,99.08231665,1,4,Yes
 0.805669756,153,30,130.0894769,96.36774655,103.6083438,1,3,No
