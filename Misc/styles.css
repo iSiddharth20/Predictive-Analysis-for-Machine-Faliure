@@ -1,0 +1,23 @@
+.container {
+  width: 500px;
+  clear: both;
+}
+
+.container input {
+  width: 100%;
+  clear: both;
+}
+
+button {
+  margin:auto;
+  display:block;
+  background-color: #0BB5FF;
+  font-size: 20px;
+  width: 50%;
+}
+
+form  { display: table;      }
+p     { display: table-row;  }
+label { display: table-cell; }
+input { display: table-cell; }
+
