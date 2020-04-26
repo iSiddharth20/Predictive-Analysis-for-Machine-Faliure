@@ -10,11 +10,11 @@ ml_model = joblib.load(mul_reg)
 
 def calstr(num):
 	if num == 0 :
-		return 'No'
+		return 'Breakdown : No'
 	elif num == 1 :
-		return 'Yes'
+		return 'Breakdown : Yes'
 	else :
-		return 'Error'
+		return 'Error!'
 
 @app.route("/")
 def home():
