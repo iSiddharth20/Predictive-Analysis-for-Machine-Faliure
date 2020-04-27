@@ -1,20 +1,21 @@
 from flask import Flask, render_template, request
 from sklearn.externals import joblib
-import pandas as pd
 import numpy as np
+from modelcode import confidence
 
 app = Flask(__name__)
 
-mul_reg = open("classification_model.pkl", "rb")
+mul_reg = open("model.pkl", "rb")
 ml_model = joblib.load(mul_reg)
 
+confidence = str(round(confidence,3))
 def calstr(num):
-	if num == 0 :
-		return 'Breakdown : No'
-	elif num == 1 :
-		return 'Breakdown : Yes'
-	else :
-		return 'Error!'
+    if num == 0:
+        return 'Breakdown : No || Confidence : ' + confidence + ' %'
+    elif num == 1:
+        return 'Breakdown : Yes || Confidence : ' + confidence + ' %'
+    else:
+        return 'Error!'
 
 @app.route("/")
 def home():
@@ -38,7 +39,7 @@ def predict():
             pred_args = [Random,Machine_nbr,lifetime,pressureInd,moistureInd,temperatureInd,team,provider]
             pred_args_arr = np.array(pred_args)
             pred_args_arr = pred_args_arr.reshape(1, -1)
-            mul_reg = open("classification_model.pkl", "rb")
+            mul_reg = open("model.pkl", "rb")
             ml_model = joblib.load(mul_reg)
             model_prediction = calstr(ml_model.predict(pred_args_arr))
         except ValueError:
