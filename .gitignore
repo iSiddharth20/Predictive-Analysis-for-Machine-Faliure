@@ -1,4 +1,4 @@
-# Ignore Mac system files
+# Ignore System Files
 .DS_store
 venv/
 __pycache__/
