@@ -30,6 +30,13 @@
 			p     { display: table-row;  font-family: 'Play', sans-serif; }
 			label { display: table-cell; }
 			input { display: table-cell; }
+
+			body {
+			  background-image: url({{ url_for('static', filename='bgimg.jpg') }});
+			  background-repeat: no-repeat;
+			  background-attachment: fixed;
+			  background-size: 53%;
+			}
 	</style>
 	<title>Breakdown Prediction</title>
 </head>

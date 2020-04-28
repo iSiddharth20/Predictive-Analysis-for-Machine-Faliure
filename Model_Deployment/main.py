@@ -5,10 +5,10 @@ from modelcode import confidence
 
 app = Flask(__name__)
 
-mul_reg = open("model.pkl", "rb")
+mul_reg = open("trained_model.pkl", "rb")
 ml_model = joblib.load(mul_reg)
 
-confidence = str(round(confidence,3))
+confidence = str(confidence)
 def calstr(num):
     if num == 0:
         return 'Breakdown : No || Confidence : ' + confidence + ' %'
@@ -39,7 +39,7 @@ def predict():
             pred_args = [Random,Machine_nbr,lifetime,pressureInd,moistureInd,temperatureInd,team,provider]
             pred_args_arr = np.array(pred_args)
             pred_args_arr = pred_args_arr.reshape(1, -1)
-            mul_reg = open("model.pkl", "rb")
+            mul_reg = open("trained_model.pkl", "rb")
             ml_model = joblib.load(mul_reg)
             model_prediction = calstr(ml_model.predict(pred_args_arr))
         except ValueError:
