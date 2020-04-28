@@ -10,10 +10,6 @@ import numpy as np
 import io
 import requests
 
-# Data Visualization
-import seaborn as sns
-import matplotlib.pyplot as plt
-
 # Pre-Processing
 from sklearn import preprocessing
 label_encoder = preprocessing.LabelEncoder()
@@ -29,13 +25,13 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 
 # Export Trained Model as *.pkl
-from sklearn.externals import joblib
+import joblib
 
 
 '''
 Getting the Data Set in the Program
 '''
-url = 'https://raw.githubusercontent.com/iSiddharth20/Predictive-Analysis-for-Machine-Faliure/master/dataset.csv?token=AJU5GO7ZVGXQNE7CRVS7I3C6WFAV2'
+url = 'https://raw.githubusercontent.com/iSiddharth20/Predictive-Analysis-for-Machine-Faliure/master/dataset.csv'
 s = requests.get(url).content
 data = pd.read_csv(io.StringIO(s.decode('utf-8')))
 
@@ -92,7 +88,6 @@ model.fit(X_train,Y_train)
 
 # Testing the Model
 Y_pred = model.predict(X_test)
-
 
 # Confidence / Accuracy
 confidence = round(accuracy_score(Y_test,Y_pred)*100,3)

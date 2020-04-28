@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-from sklearn.externals import joblib
+import joblib
 import numpy as np
 from modelcode import confidence
 
