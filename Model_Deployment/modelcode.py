@@ -80,10 +80,10 @@ X = data.drop('broken',axis = 1)
 Y = data['broken']
 
 # Splitting the Data for Training and Testing in 70:30 Ratio
-X_train, X_test, Y_train, Y_test = train_test_split(X,Y,test_size = 0.3,random_state = 0)
+X_train, X_test, Y_train, Y_test = train_test_split(X,Y,test_size = 0.3,random_state = 2)
 
 # Using Random Forest
-model = RandomForestClassifier(max_depth=10, random_state=0)
+model = RandomForestClassifier(max_depth=9, random_state=0)
 model.fit(X_train,Y_train)
 
 # Testing the Model
