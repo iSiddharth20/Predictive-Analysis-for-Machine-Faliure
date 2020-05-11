@@ -4,4 +4,4 @@ Python based Machine Learning model to process Predictive Analytics for Machine 
 + Run 'main.py' from 'Model_Deployment' folder to use the Web-App
 + The Steps and Algorithms used to Train the model can be found in the 'Model_Training' folder
 
-[Web App](https://group8tcsproject.el.r.appspot.com/)
+[Live Web App](https://group8tcsproject.el.r.appspot.com/)
