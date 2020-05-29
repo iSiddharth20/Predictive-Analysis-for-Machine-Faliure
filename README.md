@@ -1,3 +1,4 @@
+# This Repo is Under Review by the Developer, All known issues will be resolved by Sat. May 30, 5:00 PM(IST)
 # Predictive Analysis for Machine Faliure
 Python based Machine Learning model to process Predictive Analytics for Machine Failure in Factory.
 
