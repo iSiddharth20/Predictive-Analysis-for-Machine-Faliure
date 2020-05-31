@@ -5,25 +5,18 @@ Importing Libraries
 # Basic File handling
 import pandas as pd
 import numpy as np
-
 # Import Data from URL
 import io
 import requests
-
 # Pre-Processing
 from sklearn import preprocessing
 label_encoder = preprocessing.LabelEncoder()
-
 # Splitting data for Model Training
 from sklearn.model_selection import train_test_split 
-
 # Training Model
-from sklearn.ensemble import RandomForestClassifier
-# Random Forest Classifier was chosen because it was most Accurate
-
+from sklearn.ensemble import RandomForestClassifier # Optimum Algo for the Project
 # Model Evaluation : Accuracy Score
 from sklearn.metrics import accuracy_score
-
 # Export Trained Model as *.pkl
 import joblib
 
