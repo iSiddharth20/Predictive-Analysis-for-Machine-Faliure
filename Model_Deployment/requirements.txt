@@ -3,6 +3,5 @@ numpy==1.18.3
 pandas==1.0.3
 pandas-io==0.0.1
 requests==2.23.0
-sklearn==0.0
 scikit-learn==0.22.2.post1
 joblib==0.14.1
