@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css2?family=Play&display=swap" rel="stylesheet">
+	<style type="text/css" media="screen">
+			.container  {
+				width: 800px;
+				clear: both;
+						}
+
+			.container input {
+				width: 150%;
+				clear: both;
+							 }
+
+			button {
+				margin:auto;
+				display:block;
+				background-color: #0BB5FF;
+				font-size: 20px;
+				width: 50%;
+					}
+
+			form  { display: table;      }
+			p     { display: table-row;  font-family: 'Play', sans-serif; }
+			label { display: table-cell; }
+			input { display: table-cell; }
+
+			body {
+			  background-image: url({{ url_for('static', filename='bgimg.jpg') }});
+			  background-repeat: no-repeat;
+			  background-attachment: fixed;
+			  background-size: 53%;
+			}
+	</style>
+	<title>Breakdown Prediction</title>
+</head>
+<body>
+	<h1 class="text-center display-4" >Machine Faliure Prediction</h1>
+	<hr>
+	<h2 class="text-center display-4">Enter Values</h2>
+	<div class='container'>
+        <div class="jumbotron">
+			<form id='form1' method="POST" action="/predict">
+					<p>
+					<label for="Random">Random</label>
+					<input type="text" name="Random">
+					</p>
+					<br>
+
+					<p>
+					<label for="Machine_nbr">Number of Machine</label>
+					<input type="text" name="Machine_nbr">
+					</p>
+					<br>
+
+					<p>
+					<label for="lifetime">Lifetime</label>
+					<input type="text" name="lifetime">
+					</p>
+					<br>
+
+					<p>
+					<label for="pressureInd">Pressure Indicator</label>
+					<input type="text" name="pressureInd">
+					</p>
+					<br>
+
+					<p>
+					<label for="moistureInd">Moisture Indicator</label>
+					<input type="text" name="moistureInd">
+					</p>
+					<br>
+
+					<p>
+					<label for="temperatureInd">Temperature Indicator &nbsp&nbsp</label>
+					<input type="text" name="temperatureInd">
+					</p>
+					<br>
+
+					<p>
+					<label for="team">Number of Teams</label>
+					<input type="text" name="team">
+					</p>
+					<br>
+
+					<p>
+					<label for="provider">Number of providers</label>
+					<input type="text" name="provider">
+					</p>
+					<br>
+			</form>
+				<button type="submit" form="form1" value="Submit">Submit</button>
+        </div>
+	</div>
+
+</body>
+
+</html>
